@@ -1,10 +1,8 @@
 import React from 'react'
-import UseOrders from '../../Utils/UseOrders.jsx'
 import styles from './Item.module.css'
 
-export default function Item({ item }) {
+export default function Item({ item, AddToCheckout }) {
 	const { title, img, desc, material, price } = item
-	const { AddToCheckout } = UseOrders()
 
 	return (
 		<div className={styles.Item}>

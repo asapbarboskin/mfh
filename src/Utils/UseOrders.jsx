@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function UseOrders() {
 	const [orders, setOrders] = useState([])
@@ -6,6 +6,11 @@ export default function UseOrders() {
 	function DeleteOrder(id) {
 		setOrders(prevOrders => prevOrders.filter(order => order.id !== id))
 	}
+
+	// каждый раз, когда обновл
+	useEffect(() => {
+        console.log(orders);
+    }, [orders]);
 
 	function AddToCheckout(newOrder) {
 		let isOrderExist = false
@@ -15,7 +20,6 @@ export default function UseOrders() {
 		if (!isOrderExist) {
 			setOrders(prevOrders => [...prevOrders, newOrder])
 		}
-		console.log(orders)
 	}
 
 	return { orders, AddToCheckout, DeleteOrder }
