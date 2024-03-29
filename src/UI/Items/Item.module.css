@@ -1,0 +1,73 @@
+.Item {
+	width: 300px;
+	margin-left: 50px;
+	overflow: hidden;
+	padding-bottom: 20px;
+	position: relative;
+}
+.img {
+	width: 300px;
+	height: 300px;
+	border-radius: 20px;
+	transition: all 0.7s ease;
+}
+.img:hover {
+	filter: brightness(0.7);
+}
+
+.img-container {
+	position: relative;
+}
+.img-container:hover img {
+	transform: scale(1.05);
+}
+.img-container:hover .text-overlay {
+	opacity: 1;
+}
+
+.img-container:hover img {
+	filter: brightness(0.7);
+}
+.text-overlay {
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 20px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.text-overlay p {
+	margin-bottom: 5px;
+}
+h2,
+b {
+	margin: 10px;
+	margin-bottom: 0;
+}
+h2,
+b {
+	color: #333;
+}
+.addToCart {
+	position: absolute;
+	right: 10px;
+	bottom: 30px;
+	font-size: 20px;
+	background: rgba(128, 128, 128, 0.21);
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	transition: all 0.7s ease;
+	cursor: pointer;
+	font-weight: bold;
+}
+.addToCart:hover {
+	background: rgba(128, 128, 128, 0.609);
+}

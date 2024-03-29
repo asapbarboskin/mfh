@@ -1,0 +1,97 @@
+header {
+	position: relative;
+}
+.header a {
+	text-decoration: none;
+}
+.logo {
+	font-weight: bold;
+	font-size: 20px;
+	color: black;
+}
+.presentation {
+	margin: 50px 0;
+	background: url('assets/bg.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	background-color: var(--black);
+	width: 100%;
+	height: 500px;
+}
+.presentation::after {
+	color: white;
+	content: 'The best products for your home';
+	position: absolute;
+	top: 220px;
+	left: 200px;
+	font-size: 40px;
+	font-weight: 600;
+	width: 300px;
+}
+.presentation::before {
+	color: white;
+	content: 'at low prices';
+	position: absolute;
+	top: 390px;
+	left: 200px;
+	font-size: 25px;
+	font-weight: 400;
+	width: 300px;
+}
+.navigation {
+	margin: 0;
+	float: right;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	justify-content: space-between;
+}
+.navigation li {
+	display: inline;
+	cursor: pointer;
+	font-size: 20px;
+	transition: all 0.3s ease;
+}
+
+.navigation li:hover {
+	color: black;
+}
+.shop-cart-button {
+	margin-top: 6px;
+	float: right;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.shop-cart-button:hover,
+.active {
+	fill: rgb(0, 0, 0);
+	transform: scale(1.2);
+}
+.shop-cart {
+	position: absolute;
+	opacity: 0;
+	top: 30px;
+	right: 0;
+	width: 450px;
+	z-index: 1000;
+	background-color: #fafafa;
+	-webkit-box-shadow: 38px 62px 190px -28px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 38px 62px 190px -28px rgba(0, 0, 0, 1);
+	box-shadow: 38px 62px 190px -28px rgba(0, 0, 0, 1);
+	transition: all 0.4s ease-in-out;
+	overflow: hidden;
+}
+.overlay .animated {
+	opacity: 0;
+	visibility: hidden;
+}
+.overlay .shop-cart {
+	opacity: 0;
+	visibility: hidden;
+}
+.show .shop-cart {
+	opacity: 1;
+	visibility: visible;
+}

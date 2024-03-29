@@ -1,0 +1,11 @@
+.item {
+	color: black;
+	display: inline-block;
+	padding: 10px 20px;
+	cursor: pointer;
+	margin-right: 10px;
+	transition: all 0.7s ease;
+}
+.item:hover {
+	background-color: rgba(128, 128, 128, 0.21);
+}

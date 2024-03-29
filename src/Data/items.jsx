@@ -1,0 +1,42 @@
+export const items = [
+	{
+		id: 1,
+		title: 'Desk',
+		img: 'desk.png',
+		desc: 'Writing desk',
+		material: 'Wood',
+		price: '49.99',
+	},
+	{
+		id: 2,
+		title: 'Sofa',
+		img: 'sofa.png',
+		desc: 'Corner sofa',
+		material: 'Fabric',
+		price: '129.99',
+	},
+	{
+		id: 3,
+		title: 'Bed',
+		img: 'bed.png',
+		desc: 'Double bed',
+		material: 'Metal',
+		price: '399.99',
+	},
+	{
+		id: 4,
+		title: 'Wardrobe',
+		img: 'wardrobe.png',
+		desc: 'Closet',
+		material: 'Wood',
+		price: '89.99',
+	},
+	{
+		id: 5,
+		title: 'Chair',
+		img: 'chair.png',
+		desc: 'Dining chair',
+		material: 'Plastic',
+		price: '49.99',
+	},
+]

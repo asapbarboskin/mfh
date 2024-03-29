@@ -1,0 +1,9 @@
+.Items {
+	margin-top: 70px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 100%;
+
+	gap: 50px;
+	flex-wrap: wrap;
+}
