@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
-import ShowNothing from '../Orders/ShowNothing.jsx'
-import ShowOrders from '../Orders/ShowOrders.jsx'
+import ShowNothing from '../orders/ShowNothing.jsx'
+import ShowOrders from '../orders/ShowOrders.jsx'
 import styles from './Header.module.css'
 
-export default function Header({ orders, DeleteOrder }) {
+export default function Header({ showFullItem, orders, DeleteOrder }) {
 	let [cartOpen, setCartOpen] = useState(false)
 
 	const handleCartClick = () => {
@@ -16,8 +16,13 @@ export default function Header({ orders, DeleteOrder }) {
 			<div className={styles.header}>
 				<Logo />
 				<Navigation />
-				<CartIcon onClick={handleCartClick} isActive={cartOpen} />
+				<CartIcon
+					showFullItem={showFullItem}
+					onClick={handleCartClick}
+					isActive={cartOpen}
+				/>
 				<CartOverlay
+					showFullItem={showFullItem}
 					isActive={cartOpen}
 					orders={orders}
 					DeleteOrder={DeleteOrder}
@@ -45,11 +50,11 @@ const Navigation = () => (
 )
 
 // CartIcon Component
-const CartIcon = ({ onClick, isActive }) => (
+const CartIcon = ({ showFullItem, onClick, isActive }) => (
 	<FaShoppingCart
 		onClick={onClick}
 		className={
-			isActive
+			isActive && !showFullItem
 				? `${styles['shop-cart-button']} ${styles['active']}`
 				: styles['shop-cart-button']
 		}
@@ -57,10 +62,10 @@ const CartIcon = ({ onClick, isActive }) => (
 )
 
 // CartOverlay Component
-const CartOverlay = ({ isActive, orders, DeleteOrder }) => (
+const CartOverlay = ({ showFullItem, isActive, orders, DeleteOrder }) => (
 	<div
 		className={
-			isActive
+			isActive && !showFullItem
 				? `${styles[`overlay`]} ${styles[`animated`]} ${styles[`show`]}`
 				: `${styles[`overlay`]} ${styles[`animated`]}`
 		}

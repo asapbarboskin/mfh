@@ -3,11 +3,11 @@ import { useState } from 'react'
 export default function UseOrders() {
 	const [orders, setOrders] = useState([])
 
-	function DeleteOrder(id) {
+	const DeleteOrder = id => {
 		setOrders(prevOrders => prevOrders.filter(order => order.id !== id))
 	}
 
-	function AddToCheckout(newOrder) {
+	const AddToCheckout = newOrder => {
 		let isOrderExist = false
 		orders.forEach(order => {
 			if (order.id === newOrder.id) isOrderExist = true

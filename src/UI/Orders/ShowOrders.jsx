@@ -1,5 +1,5 @@
 import React from 'react'
-import Order from '../Orders/Order.jsx'
+import Order from './Order.jsx'
 import styles from './ShowOrders.module.css'
 export default function ShowOrders({ orders, DeleteOrder }) {
 	let sum = 0

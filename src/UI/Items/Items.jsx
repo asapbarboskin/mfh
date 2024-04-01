@@ -2,7 +2,7 @@ import React from 'react'
 import Item from './Item.jsx'
 import styles from './Items.module.css'
 
-export default function Items({ current, AddToCheckout }) {
+export default function Items({ current, AddToCheckout, HandleShowFullItem }) {
 	return (
 		<div className={styles.Items}>
 			{current.map(el => (
@@ -11,6 +11,7 @@ export default function Items({ current, AddToCheckout }) {
 					key={el.id}
 					item={el}
 					AddToCheckout={AddToCheckout}
+					HandleShowFullItem={HandleShowFullItem}
 				/>
 			))}
 		</div>

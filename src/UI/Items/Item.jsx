@@ -1,12 +1,15 @@
 import React from 'react'
 import styles from './Item.module.css'
 
-export default function Item({ item, AddToCheckout }) {
+export default function Item({ item, AddToCheckout, HandleShowFullItem }) {
 	const { title, img, desc, material, price } = item
 
 	return (
 		<div className={styles.Item}>
-			<div className={styles['img-container']}>
+			<div
+				className={styles['img-container']}
+				onClick={() => HandleShowFullItem(item)}
+			>
 				<img className={styles.img} src={'/assets/' + img} alt='' />
 				<div className={styles['text-overlay']}>
 					<p>{desc}</p>

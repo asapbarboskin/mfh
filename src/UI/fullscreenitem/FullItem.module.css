@@ -1,14 +1,35 @@
-.Item {
-	width: 300px;
-	margin-left: 50px;
+.overlay {
+	position: fixed;
+	overflow: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.455);
+	margin: 0;
+	border-radius: 10px;
+	display: grid;
+}
+.full-item {
+	position: fixed;
 	overflow: hidden;
-	padding-bottom: 20px;
-	position: relative;
-	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	width: 450px;
+	height: 550px;
+	background-color: #ffffff;
+	margin: 10% auto;
+	border-radius: 10px;
+	display: grid;
 }
 .img {
-	width: 300px;
-	height: 300px;
+	width: 400px;
+	height: 400px;
 	border-radius: 20px;
 	transition: all 0.7s ease;
 }
@@ -17,6 +38,10 @@
 }
 
 .img-container {
+	cursor: pointer;
+	margin: 5% auto;
+	margin-bottom: 5px;
+	display: inline;
 	position: relative;
 }
 .img-container:hover img {
@@ -45,16 +70,16 @@
 	transition: opacity 0.3s ease;
 }
 .text-overlay p {
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 }
-h2,
-b {
-	margin: 10px;
+.full-item h2 {
+	margin-top: 0;
+	margin-left: 20px;
 	margin-bottom: 0;
 }
-h2,
-b {
-	color: #333;
+.full-item b {
+	margin-top: 0;
+	margin-left: 20px;
 }
 .addToCart {
 	position: absolute;

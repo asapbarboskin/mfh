@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { categories } from '../../Data/categories'
+import { categories } from '../../data/categories'
 import styles from './Categories.module.css'
 
 export default function Categories({ ChangeCurrent }) {
