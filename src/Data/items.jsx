@@ -2,6 +2,7 @@ export const items = [
 	{
 		id: 1,
 		title: 'Desk',
+		name: 'desk',
 		img: 'desk.png',
 		desc: 'Writing desk',
 		material: 'Wood',
@@ -10,6 +11,7 @@ export const items = [
 	{
 		id: 2,
 		title: 'Sofa',
+		name: 'sofa',
 		img: 'sofa.png',
 		desc: 'Corner sofa',
 		material: 'Fabric',
@@ -18,6 +20,7 @@ export const items = [
 	{
 		id: 3,
 		title: 'Bed',
+		name: 'bed',
 		img: 'bed.png',
 		desc: 'Double bed',
 		material: 'Metal',
@@ -26,6 +29,7 @@ export const items = [
 	{
 		id: 4,
 		title: 'Wardrobe',
+		name: 'wardrobe',
 		img: 'wardrobe.png',
 		desc: 'Closet',
 		material: 'Wood',
@@ -34,6 +38,7 @@ export const items = [
 	{
 		id: 5,
 		title: 'Chair',
+		name: 'chair',
 		img: 'chair.png',
 		desc: 'Dining chair',
 		material: 'Plastic',
